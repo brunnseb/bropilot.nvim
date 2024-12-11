@@ -46,13 +46,8 @@ local function render()
   virtual_text.render(suggestion_lines)
 end
 
----@param done boolean
 ---@param response string
-local function on_data(done, response)
-  if done then
-    return
-  end
-
+local function on_data(response)
   if response then
     current_suggestion = current_suggestion .. response
   end
